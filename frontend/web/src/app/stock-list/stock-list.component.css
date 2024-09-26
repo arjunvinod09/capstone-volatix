@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     gap: 35px;
-    padding: 35px;
-    background-color:  #f8e2c8;
+    /* padding: 35px; */
+    background-color:  white;
   }
 
 h4 {
@@ -13,9 +13,10 @@ h4 {
 }
 
 h3 {
-  font-style: italic;
+  font-size: 26px;
+  /* font-style: italic; */
   color: black;
-  border: 2px solid #ff9e03;
+  border: 2px solid rgb(65, 81, 96);
   border-radius: 10px;
   background-color: #ffffff;
   padding: 10px;
@@ -202,6 +203,7 @@ h3 {
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
     overflow: hidden;
+    padding: 36px;
   }
   
   .stock-card:hover {
