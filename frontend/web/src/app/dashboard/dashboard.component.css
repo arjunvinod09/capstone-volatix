@@ -6,7 +6,7 @@
   justify-content: flex-start;
   gap: 35px;
   padding: 35px;
-  background-color:  #f8e2c8;
+  background-color:  white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -321,7 +321,7 @@ h4 {
   flex-direction: column;
   gap: 15px;
   border-radius: 10px;
-  background: #f9c284;
+  background: rgb(95, 178, 182);;
   padding: 25px 20px;
 }
 
@@ -332,7 +332,7 @@ h4 {
 }
 
 .learn-body-button {
-  background-color: #fdebd6;
+  background-color: whitesmoke;
   color: white;
   padding: 10px;
   border-radius: 8px;
@@ -344,8 +344,12 @@ h4 {
   transition: background-color 0.3s;
 }
 
+.learn-body-button > a {
+  color: black;
+}
+
 .learn-body-button:hover {
-  background-color: #fed389;
+  background-color: rgb(65, 81, 96);
 }
 
 /* Trending container styling */
@@ -388,7 +392,7 @@ h4 {
 mat-table {
   width: 100%;
   border-collapse: collapse;
-  border: 5px solid #ff9e03;
+  border: 5px solid rgb(95, 178, 182);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 15px 15px rgba(94, 65, 65, 0.853);
