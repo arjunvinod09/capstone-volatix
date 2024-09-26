@@ -1,0 +1,50 @@
+/* General Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+thead {
+  background-color: #f4f4f4;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+/* Zebra Striping for Rows */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover Effect for Rows */
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Table Caption */
+caption {
+  font-size: 1.5em;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+/* No Transactions Message */
+p {
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+  margin: 20px 0;
+}

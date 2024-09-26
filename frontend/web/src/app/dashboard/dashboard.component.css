@@ -1,0 +1,481 @@
+/* Container styling */
+.dashboard-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 35px;
+  padding: 35px;
+  background-color:  #f8e2c8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header and Navbar styling */
+h4 {
+  font-style: italic;
+  color: brown;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: space-between; 
+  width: 100%;
+  padding: 0 20px; 
+  box-sizing: border-box; 
+}
+
+/* First div in navbar (e.g., logo container or any other div) */
+.navbar > div {
+  flex-shrink: 0; 
+}
+
+/* Navbar ul styling */
+.navbar ul {
+  display: flex; 
+  flex-direction: row;
+  gap: 20px; 
+  list-style-type: none; 
+  background-color: #f9c284; 
+  border-radius: 10px;
+  padding: 0;
+  flex-grow: 1; 
+  justify-content: flex-start; 
+  margin-left: 20px;
+}
+
+/* Navbar li and a styling */
+.navbar li {
+  padding: 14px 20px;
+
+}
+
+.navbar a {
+  color: brown;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #007bff; 
+}
+
+
+.profile-avatar {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8e2c8;
+  border: 1px solid brown;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  z-index: 1000;
+}
+
+.profile-dropdown a {
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.profile-dropdown a:hover {
+  background-color: #f9f9f9;
+}
+
+
+/* Navbar dropdown styling */
+.navbar .dropdown {
+  position: relative;
+}
+
+.navbar .dropdown-toggle {
+  background: none;
+  border: none;
+  color: brown;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #f9c284;
+  border: 2px solid #ff9e03;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar .dropdown-menu.show {
+  display: block;
+}
+
+.navbar .dropdown-item {
+  color: brown;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #f8e2c8;
+  border-radius: 5px;
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-content {
+  background-color: #f8e2c8;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 80%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: brown;
+}
+
+.dialog-content button{
+  border-radius: 5px;
+  background-color: #f9c284;
+  color:brown;
+}
+
+/* Dashboard header styling */
+.dashboard-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-header-title {
+  font-size: 25px;
+  font-weight: 600;
+  color: #333;
+}
+
+.dashboard-header-caption {
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Body styling */
+.dashboard-body {
+  display: flex;
+  gap: 20px;
+}
+
+.dashboard-body-right-section {
+  width: 75%;
+}
+
+.dashboard-body-left-section {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Portfolio container styling */
+.dashboard-portfolio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dashboard-portfolio-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard-body-title {
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+}
+
+.dashboard-body-link {
+  font-size: 12px;
+  font-weight: 700;
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.dashboard-body-link:hover {
+  color: #0056b3;
+}
+
+.dashboard-portfolio-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dashboard-portfolio-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dashboard-portfolio-card:hover {
+  background-color: #f8f9fa;
+}
+
+.portfolio-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555; 
+}
+
+.portfolio-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.portfolio-body-balance {
+  font-weight: 700;
+  font-size: 22px;
+  color: #333;
+}
+
+.portfolio-body-returns-gain {
+  background-color: #28a745;
+  border-radius: 8px;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+.portfolio-body-returns-loss {
+  background-color: #dc3545;
+  border-radius: 8px;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Learn container styling */
+.dashboard-learn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dashboard-learn-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 10px;
+  background: #f9c284;
+  padding: 25px 20px;
+}
+
+.learn-body-content {
+  font-size: 13px;
+  color: #000;
+  font-weight: 600;
+}
+
+.learn-body-button {
+  background-color: #fdebd6;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.learn-body-button:hover {
+  background-color: #fed389;
+}
+
+/* Trending container styling */
+.dashboard-trending-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 35%;
+  background-color: #f9c284;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.dashboard-trending-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dashboard-trending-card {
+  border: 1px solid #ff9e03;
+  border-radius: 10px;
+  padding: 12px 15px;
+  transition: background-color 0.3s, border-color 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.dashboard-trending-card:hover {
+  background-color: #f9eedd;
+  border: 3px solid #ff9e03;
+}
+
+/* Table styling */
+mat-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 5px solid #ff9e03;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 15px rgba(94, 65, 65, 0.853);
+}
+
+/* Add hover effect to mat-table rows */
+mat-row:hover {
+  background-color: #f9eedd;
+  border: 1px solid #ff9e03;
+  cursor: pointer;
+}
+
+mat-header-cell {
+  font-weight: bold;
+  background-color: #f9eedd; 
+  padding: 12px;
+  text-align: left;
+  color: #333;
+  border-bottom: 1px solid #ff9e03;
+}
+
+mat-cell {
+  padding: 12px;
+  text-align: left;
+  color: #333;
+  border-bottom: 1px solid #ff9e03;
+}
+
+/* Stock name container */
+.stock-name-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.stock-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.stock-symbol {
+  font-size: 0.85em;
+  color: #777;
+}
+
+.mat-cell img {
+  border-radius: 50%;
+  border: 1px solid #dee2e6;
+  padding: 2px;
+}
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .mat-header-cell, .mat-cell {
+    padding: 10px;
+  }
+
+  .stock-name-container {
+    gap: 5px;
+  }
+
+  .mat-row {
+    font-size: 0.9em;
+  }
+}
+
+/* Trending card header styling */
+.trending-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trending-card-header-image {
+  display: flex;
+  align-items: center;
+}
+
+.trending-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard-top-coins-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 65%;
+}

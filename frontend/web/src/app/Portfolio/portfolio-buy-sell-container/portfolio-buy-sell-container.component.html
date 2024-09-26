@@ -1,0 +1,68 @@
+<div class="portfolio-container">
+  <h2>{{ portfolio?.portfolioName }}</h2>
+  <p>Investment Agenda: {{ portfolio?.investmentAgenda }}</p>
+  <div class="trade">
+  <div class="buy-stock-form">
+    <h3>Buy Stock</h3>
+    <label for="stock-select-buy">Select Stock:</label>
+    <select id="stock-select-buy" [(ngModel)]="stockToBuy">
+      <option *ngFor="let stock of availableStocks" [ngValue]="stock">
+        {{ stock.name }} ({{ stock.symbol }})
+      </option>
+    </select>
+ 
+    <label for="quantity-buy">Quantity:</label>
+    <input type="number" id="quantity-buy" [(ngModel)]="quantityToBuy" />
+ 
+    <button (click)="addStock()">Buy Stock</button>
+  </div>
+ 
+  <div class="sell-stock-form">
+    <h3>Sell Stock</h3>
+    <label for="stock-select-sell">Select Stock:</label>
+    <select id="stock-select-sell" [(ngModel)]="stockToSell">
+      <option *ngFor="let stock of stocks" [ngValue]="stock">
+        {{ stock.stockName }} ({{ stock.stockSymbol }})
+      </option>
+    </select>
+ 
+    <label for="quantity-sell">Quantity:</label>
+    <input type="number" id="quantity-sell" [(ngModel)]="quantityToSell" />
+ 
+    <button (click)="sellStock()">Sell Stock</button>
+  </div>
+</div>
+
+  <div class="portfolio-holdings">
+    <h3>Portfolio Holdings</h3>
+    <table class="stock-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Stock Name</th>
+          <th>Avg. Buy Price</th>
+          <th>Quantity</th>
+          <th>Returns</th>
+          <th>Price</th>
+          <th>%1D</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stock of stocks" (click)="viewTransactions(stock.stockId)" class="stock-row" >
+         
+          <td>
+            <img [src]="stock.stockImage" alt="{{ stock.stockName }}" class="stock-image" />
+            {{ stock.stockName }}
+          </td>
+          <td>{{ stock.stockSymbol }}</td>
+          <td>{{ stock.avgBuyPrice | currency }}</td>
+          <td>{{stock.quantity}}</td>
+          <td>{{ stock.returns | currency}}</td>
+          <td>{{ stock.currentPrice | currency}}</td>
+          <td>{{ stock.priceChangePercentage24h}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>

@@ -1,0 +1,79 @@
+<!-- src/app/components/login/login.component.html -->
+<!-- <div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-4 shadow-lg" style="max-width: 400px; width: 100%;">
+    <h3 class="text-center mb-4">Login</h3>
+    
+    <form (ngSubmit)="login()">
+      <div class="form-group mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" class="form-control" [(ngModel)]="loginRequest.email" name="email" required />
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" class="form-control" [(ngModel)]="loginRequest.password" name="password" required />
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+
+    <p class="text-center mt-3">Don't have an account? 
+      <a  class="text-decoration-none" [routerLink]="['/register']">Register here</a>
+    </p>
+  </div>
+</div> -->
+
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <nav class="navbar" style="justify-content:flex-start; margin-right:100px ;">
+    <div>
+        <img src="assets/IMlogo.png" alt="InvestMateLogo" height="100" >
+        <!-- <h4 style="font-style: italic;">InvestMate</h4> -->
+    </div>
+  </nav>
+  <div class="card p-4 shadow-lg" style="max-width: 400px; width: 100%;">
+    <h3 class="text-center mb-4">Login</h3>
+    
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+      <div class="form-group mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          [(ngModel)]="loginRequest.email"
+          name="email"
+          #email="ngModel"
+          required
+          email
+        />
+        <div *ngIf="email.touched && email.invalid" class="text-danger">
+          Please enter a valid email.
+        </div>
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          [(ngModel)]="loginRequest.password"
+          name="password"
+          #password="ngModel"
+          required
+          minlength="6"
+        />
+        <div *ngIf="password.touched && password.invalid" class="text-danger">
+          Password must be at least 6 characters long.
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid">Login</button>
+    </form>
+
+    <p class="text-center mt-3">Don't have an account? 
+      <a class="text-decoration-none" [routerLink]="['/register']">Register here</a>
+    </p>
+  </div>
+</div>

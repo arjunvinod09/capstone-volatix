@@ -1,0 +1,51 @@
+<!-- No Portfolio Container -->
+ <div class="body-of-portfolio-container">
+<div *ngIf="portfolios.length === 0" class="no-portfolio-container">
+  <h4 class="no-portfolio-heading">No Portfolios to Display</h4>
+  <span class="no-portfolio-message">Create a new portfolio to get started</span>
+  <button mat-raised-button color="primary" (click)="openAddPortfolioDialog()" class="create-portfolio-button">
+    <mat-icon>add</mat-icon> Create Portfolio
+  </button>
+</div>
+
+<!-- Portfolio Container -->
+<div *ngIf="portfolios.length > 0" class="portfolio-container">
+  <div class="sidebar-portfolio-container">
+    <mat-list>
+      <mat-list-item class="mat-list-header">
+        <span class="portfolio-title">My Portfolios</span>
+        <button mat-icon-button (click)="openAddPortfolioDialog()" matTooltip="Create a new portfolio" class="add-portfolio-button">
+          <mat-icon>add_circle</mat-icon>
+        </button>
+      </mat-list-item>
+
+      <mat-list-item *ngFor="let portfolio of portfolios; let i = index"
+               [ngClass]="{'selected-portfolio': selectedIndex === i}"
+               class="mat-list-item portfolio-item">
+  <div class="portfolio-item-content">
+    <div (click)="handleListItemClick(i)" class="portfolio-item-info">
+      <a [routerLink]="['/portfolio/buy-sell', portfolio.portfolioId]" class="portfolio-link">
+        <span class="portfolio-name" [ngClass]="{'selected-portfolio-title': selectedIndex === i}">
+          {{portfolio.portfolioName}}
+        </span>
+      </a>
+      <span class="portfolio-agenda" [ngClass]="{'selected-portfolio-line': selectedIndex === i}">
+        {{portfolio.investmentAgenda}}
+      </span>
+    </div>
+    <div class="portfolio-item-actions">
+      <button mat-icon-button (click)="openEditPortfolioDialog(portfolio)" matTooltip="Edit" class="edit-button action-button">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" (click)="openDeletePortfolioDialog(portfolio.portfolioId)" matTooltip="Delete" class="delete-button action-button">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-list-item>
+
+    </mat-list>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+</div>

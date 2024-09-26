@@ -1,0 +1,20 @@
+
+<div class="stock-list-container">
+  <h3>Today's Cryptocurrency Prices By Market Cap</h3>
+  <div class="stock-list-container">
+    <div class="stock-card" *ngFor="let stock of stocks" (click)="viewStockDetails(stock.id)">
+      <img class="stock-image" [src]="stock.image" alt="{{stock.name}}">
+      <div class="stock-info">
+        <h5 class="stock-symbol">{{ stock.symbol }}</h5>
+        <p class="stock-name">{{ stock.name }}</p>
+        <p class="stock-price">{{ stock.current_price | currency: 'USD' }}</p>
+        <p class="stock-market-cap">Market Cap: {{ stock.market_cap | number }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

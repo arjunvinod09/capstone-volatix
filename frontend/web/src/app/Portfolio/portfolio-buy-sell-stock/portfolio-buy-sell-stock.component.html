@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Add Transaction</h2>
+<mat-tab-group (selectedTabChange)="handleTabChange($event)">
+  <mat-tab label="Buy"></mat-tab>
+  <mat-tab label="Sell"></mat-tab>
+</mat-tab-group>
+<mat-dialog-content>
+  <app-portfolio-buy-sell-stock [portfolioId]="portfolioId" [type]="type"
+    [stockId]="stockId" [stockName]="stockName" [currentPrice]="currentPrice"
+    (close)="closeDialog($event)">
+  </app-portfolio-buy-sell-stock>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <!-- Actions if needed -->
+</mat-dialog-actions>

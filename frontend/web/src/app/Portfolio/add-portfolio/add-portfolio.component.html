@@ -1,0 +1,67 @@
+<!-- <h2 mat-dialog-title>{{ data.type === 'add' ? 'Create Portfolio' : 'Edit Portfolio' }}</h2>
+<mat-dialog-content>
+  <form [formGroup]="portfolioForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="portfolioName" required>
+      <mat-error *ngIf="portfolioForm.get('portfolioName')?.hasError('required')">
+        Portfolio name is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Investment Agenda</mat-label>
+      <mat-select formControlName="investmentAgenda" required>
+        <mat-option *ngFor="let option of portfolioData" [value]="option.name">
+          {{option.name}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="portfolioForm.get('investmentAgenda')?.hasError('required')">
+        Investment agenda is required
+      </mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="portfolioForm.invalid">
+    {{ data.type === 'add' ? 'Add' : 'Edit' }}
+  </button>
+</mat-dialog-actions> -->
+
+
+<h2 mat-dialog-title class="dialog-title">
+  {{ data.type === 'add' ? 'Create Portfolio' : 'Edit Portfolio' }}
+</h2>
+<mat-dialog-content class="dialog-content">
+  <form [formGroup]="portfolioForm" class="portfolio-form">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="portfolioName" required>
+      <mat-error *ngIf="portfolioForm.get('portfolioName')?.hasError('required')">
+        Portfolio name is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Investment Agenda</mat-label>
+      <mat-select formControlName="investmentAgenda" required>
+        <mat-option *ngFor="let option of portfolioData" [value]="option.name">
+          {{option.name}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="portfolioForm.get('investmentAgenda')?.hasError('required')">
+        Investment agenda is required
+      </mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions class="dialog-actions">
+  <button mat-stroked-button (click)="onCancel()" class="action-button">
+    Cancel
+  </button>
+  <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="portfolioForm.invalid" class="submit-button">
+    {{ data.type === 'add' ? 'Add' : 'Edit' }}
+  </button>
+</mat-dialog-actions>
+

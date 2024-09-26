@@ -1,0 +1,278 @@
+.stock-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding: 35px;
+    background-color:  #f8e2c8;
+  }
+
+h4 {
+  font-style: italic;
+  color: brown;
+}
+
+h3 {
+  font-style: italic;
+  color: black;
+  border: 2px solid #ff9e03;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: space-between; 
+  width: 100%;
+  padding: 0 20px; 
+  box-sizing: border-box; 
+  background-color: #f8e2c8;
+}
+
+/* First div in navbar (e.g., logo container or any other div) */
+.navbar > div {
+  flex-shrink: 0; 
+}
+
+/* Navbar ul styling */
+.navbar ul {
+  display: flex; 
+  flex-direction: row;
+  gap: 20px; 
+  list-style-type: none; 
+  background-color: #f9c284; 
+  border-radius: 10px;
+  margin-left: 20px;
+  padding: 0;
+  flex-grow: 1; 
+  justify-content: flex-start; 
+}
+
+/* Navbar li and a styling */
+.navbar li {
+  padding: 14px 20px;
+
+}
+
+.navbar a {
+  color: brown;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #007bff; 
+}
+
+
+.profile-avatar {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8e2c8;
+  border: 1px solid brown;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  z-index: 1000;
+}
+
+.profile-dropdown a {
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.profile-dropdown a:hover {
+  background-color: #f9f9f9;
+}
+
+
+/* Navbar dropdown styling */
+.navbar .dropdown {
+  position: relative;
+}
+
+.navbar .dropdown-toggle {
+  background: none;
+  border: none;
+  color: brown;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #f9c284;
+  border: 2px solid #ff9e03;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar .dropdown-menu.show {
+  display: block;
+}
+
+.navbar .dropdown-item {
+  color: brown;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #f8e2c8;
+  border-radius: 5px;
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-content {
+  background-color: #f8e2c8;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 80%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: brown;
+}
+
+.dialog-content button{
+  border-radius: 5px;
+  background-color: #f9c284;
+  color:brown;
+}
+  
+  .stock-card {
+    width: 800px;
+    max-width: 700px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .stock-card:hover {
+    transform: translateX(10px);
+  }
+  
+  .stock-image {
+    width: 100px; /* Adjusted width */
+    height: 100px; /* Adjusted height to match card height */
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .stock-info {
+    padding: 10px; /* Reduced padding for more compact design */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .stock-symbol {
+    font-size: 22px; /* Adjusted font size */
+    font-weight: bold;
+    color: #343a40; /* Dark text color */
+    margin-bottom: 5px;
+  }
+  
+  .stock-name {
+    font-size: 16px; /* Adjusted font size */
+    color: #6c757d; /* Muted text color */
+    margin-bottom: 5px;
+  }
+  
+  .stock-price {
+    font-size: 18px; /* Adjusted font size */
+    font-weight: bold;
+    color: #28a745; /* Green color for price */
+    margin-bottom: 5px;
+  }
+  
+  .stock-market-cap {
+    font-size: 14px; /* Adjusted font size */
+    color: #6c757d; /* Muted text color */
+  }
+  
+  @media (max-width: 600px) {
+    .stock-card {
+      flex-direction: column;
+      align-items: center;
+      height: auto; /* Allow height to adjust on smaller screens */
+    }
+  
+    .stock-image {
+      width: 100%;
+      height: auto; /* Adjust height for responsive design */
+      border-radius: 10px 10px 0 0;
+    }
+  
+    .stock-info {
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+
+
+
+
+
+
+
+  

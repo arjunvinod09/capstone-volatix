@@ -1,0 +1,19 @@
+<div class="learn-container">
+    <h2>Latest Cryptocurrency News</h2>
+    <div class="news-articles">
+      <div *ngFor="let article of newsArticles" class="article">
+        <img [src]="article.urlToImage" alt="{{ article.title }}">
+        <h3>{{ article.title }}</h3>
+        <p>{{ article.description }}</p>
+        <a [href]="article.url" target="_blank">Read more</a>
+      </div>
+    </div>
+  <br><br>
+    <h2>Learn More About Cryptocurrency</h2>
+    <div class="youtube-videos">
+      <div *ngFor="let videoUrl of youtubeVideoUrls" class="video-card">
+        <iframe [src]="videoUrl" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  

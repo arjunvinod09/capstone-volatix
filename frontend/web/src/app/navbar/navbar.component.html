@@ -1,0 +1,45 @@
+<div class="navbar-container" *ngIf="showNavbar">
+    <nav class="navbar" *ngIf="showNavbar">
+        <div>
+            <img src="assets/IMlogo.png" alt="InvestMateLogo" height="100">
+            <h4>InvestMate</h4>
+        </div>
+        <ul>
+            <li><a class="text-decoration-none" [routerLink]="['/dashboard']">Home</a></li>
+            <li><a class="text-decoration-none" [routerLink]="['/stocks']">Market</a></li>
+            <li><a class="text-decoration-none" [routerLink]="['/portfolio']">Portfolio</a></li>
+            <li><a class="text-decoration-none" [routerLink]="['/learn']">Learn</a></li>
+        
+            <li class="dropdown" style="margin-left:100px;">
+                <div class="profile-avatar" (click)="toggleDropdown()">
+                    <img [src]="userDetails?.profilePicture || 'assets/usericon.png'" alt="User Profile Picture">
+                </div>
+                <div class="dropdown-menu" [class.show]="dropdownOpen">
+                    <a (click)="openUserDetailsDialog()">User Details</a>
+                    <a class="dropdown-item" (click)="logout()">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div *ngIf="showUserDetailsDialog" class="dialog-overlay">
+        <div class="dialog-content">
+            <h2>User Details:</h2>
+            <div *ngIf="userDetails">
+                <p><strong>Username:</strong> {{ userDetails.username }}</p>
+                <p><strong>Email:</strong> {{ userDetails.email }}</p>
+                <p><strong>First Name:</strong> {{ userDetails.firstName }}</p>
+                <p><strong>Last Name:</strong> {{ userDetails.lastName }}</p>
+                <p><strong>Date of Birth:</strong> {{ userDetails.dateOfBirth | date }}</p>
+                <p><strong>Address:</strong> {{ userDetails.address }}</p>
+                <p><strong>Phone Number:</strong> {{ userDetails.phoneNumber }}</p>
+                <p><strong>Registration Date:</strong> {{ userDetails.registrationDate | date }}</p>
+            </div>
+            <button (click)="closeUserDetailsDialog()">Close</button>
+        </div>
+    </div>
+
+
+
+    
+</div>

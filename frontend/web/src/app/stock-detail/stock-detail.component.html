@@ -1,0 +1,23 @@
+
+<div class="stock-container">
+  <div *ngIf="stock" class="stock-detail-container">
+    <div class="stock-info">
+      <img [src]="stock.image" alt="{{stock.name}}" width="100">
+      <h2>{{ stock.name }} ({{ stock.symbol }})</h2>
+      <p class="price">Price: {{ stock.current_price | currency: 'USD' }}</p>
+      <p>Market Cap: {{ stock.market_cap | number }}</p>
+      <p>Total Volume: {{ stock.total_volume | number }}</p>
+      <p>High 24h: {{ stock.high_24h | currency: 'USD' }}</p>
+      <p>Low 24h: {{ stock.low_24h | currency: 'USD' }}</p>
+      <p [ngClass]="{'price-up': stock.price_change_percentage_24h > 0, 'price-down': stock.price_change_percentage_24h < 0}">
+        Price Change Percentage 24h: {{ stock.price_change_percentage_24h }}%
+      </p>
+    </div>
+    
+    
+      <div class="chart-container">
+        <canvas #stockChart></canvas>
+      </div>
+  </div>
+</div>
+  

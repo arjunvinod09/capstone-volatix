@@ -1,0 +1,96 @@
+/* Dialog styling */
+.dialog-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #f8e2c8;
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8e2c8; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Form styling */
+.portfolio-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.mat-form-field {
+  background-color: #f8e2c8; 
+  border-radius: 8px;
+}
+
+.mat-label {
+  color: #333; 
+  font-weight: 600;
+}
+
+input[matInput], mat-select {
+  color: #333; 
+}
+
+.mat-error {
+  color: #dc3545; 
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Button styling */
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  padding: 10px 0;
+  background-color: #f8e2c8; 
+  border-top: 1px solid #f1cba5; 
+}
+
+.action-button {
+  border-color: #ff9e03; 
+  color: #333;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #ffecd1; 
+}
+
+.submit-button {
+  background-color: #ff9e03; 
+  color: white;
+  font-weight: 600;
+  transition: background-color 
+}
+
+.submit-button:hover {
+  background-color: #e68a00; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dialog-content {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .dialog-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
