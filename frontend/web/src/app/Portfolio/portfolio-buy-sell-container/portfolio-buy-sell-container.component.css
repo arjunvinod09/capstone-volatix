@@ -14,7 +14,7 @@
 .portfolio-container {
   width: 100%;
   padding: 35px;
-  background-color: #f8e2c8;
+  background-color: whitesmoke;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -23,7 +23,7 @@
 .portfolio-container h2 {
   font-size: 25px;
   font-weight: 600;
-  color: brown;
+  color: rgb(65, 81, 96);
   margin-bottom: 15px;
 }
 
@@ -43,12 +43,13 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   height: 30%;
   width: 40%;
+  border: 2px solid rgb(65, 81, 96);
 }
 
 .buy-stock-form h3, .sell-stock-form h3 {
   font-size: 20px;
   font-weight: 600;
-  color: brown;
+  color: rgb(65, 81, 96);
   margin-bottom: 15px;
 }
 
@@ -69,17 +70,18 @@
 }
 
 .buy-stock-form button, .sell-stock-form button {
-  background-color: #f9c284;
-  color: brown;
+  background-color: whitesmoke;
+  color: rgb(65, 81, 96);
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  border: 2px solid black;
 }
 
 .buy-stock-form button:hover, .sell-stock-form button:hover {
-  background-color: #f9a364;
+  background-color: rgb(176, 237, 240)
 }
 
 /* Portfolio holdings styling */
@@ -210,7 +212,7 @@
 }
 
 .stock-row:hover {
-  background-color: #f9c284; /* White background on hover */
+  background-color: rgb(176, 237, 240); /* White background on hover */
 }
 
 .stock-row td {

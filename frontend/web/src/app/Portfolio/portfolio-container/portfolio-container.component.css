@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: #f9c284; /* Maintain this background color */
+  background-color: whitesmoke; /* Maintain this background color */
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin: 20px;
@@ -52,6 +52,7 @@
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgb(95, 178, 182);
 }
 
 .mat-list-header {
@@ -138,9 +139,9 @@
   transition: color 0.3s; /* Smooth color transition on hover */
 }
 
-.portfolio-name:hover {
-  color: #f9c284; /* Color change on hover */
-}
+/* .portfolio-name:hover { */
+  /* color: #f9c284; Color change on hover */
+/* } */
 
 .portfolio-agenda {
   font-size: 14px;
