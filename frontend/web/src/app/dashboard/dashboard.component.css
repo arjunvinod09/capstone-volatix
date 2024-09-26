@@ -7,8 +7,9 @@
   gap: 35px;
   padding: 35px;
   background-color:  white;
-  border-radius: 8px;
+  border-radius: 8px s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Header and Navbar styling */
@@ -314,6 +315,7 @@ h4 {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  /* border: 1px solid rgb(65, 81, 96); */
 }
 
 .dashboard-learn-body {
@@ -321,8 +323,9 @@ h4 {
   flex-direction: column;
   gap: 15px;
   border-radius: 10px;
-  background: rgb(95, 178, 182);;
+  background: rgb(146, 215, 218);
   padding: 25px 20px;
+  border: 1px solid rgb(65, 81, 96);
 }
 
 .learn-body-content {
@@ -358,8 +361,9 @@ h4 {
   flex-direction: column;
   gap: 10px;
   width: 35%;
-  background-color: #f9c284;
+  background-color: whitesmoke;
   border-radius: 10px;
+  border: 3px solid rgb(95, 178, 182);
   padding: 10px;
 }
 
@@ -372,7 +376,7 @@ h4 {
 }
 
 .dashboard-trending-card {
-  border: 1px solid #ff9e03;
+  border: 1px solid rgb(95, 178, 182);
   border-radius: 10px;
   padding: 12px 15px;
   transition: background-color 0.3s, border-color 0.3s;
@@ -384,24 +388,25 @@ h4 {
 }
 
 .dashboard-trending-card:hover {
-  background-color: #f9eedd;
-  border: 3px solid #ff9e03;
+  background-color: rgb(176, 237, 240);
+  border: 1px solid rgb(65, 81, 96);
 }
 
 /* Table styling */
 mat-table {
   width: 100%;
   border-collapse: collapse;
-  border: 5px solid rgb(95, 178, 182);
+  border: 3px solid rgb(95, 178, 182);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 15px 15px rgba(94, 65, 65, 0.853);
+  box-shadow: 0 10px 10px rgba(158, 209, 215, 0.853);
+  background: whitesmoke;
 }
 
 /* Add hover effect to mat-table rows */
 mat-row:hover {
-  background-color: #f9eedd;
-  border: 1px solid #ff9e03;
+  background-color: rgb(176, 237, 240);
+  border: 1px solid rgb(65, 81, 96);
   cursor: pointer;
 }
 
@@ -411,14 +416,14 @@ mat-header-cell {
   padding: 12px;
   text-align: left;
   color: #333;
-  border-bottom: 1px solid #ff9e03;
+  border-bottom: 1px solid rgb(65, 81, 96);
 }
 
 mat-cell {
   padding: 12px;
   text-align: left;
   color: #333;
-  border-bottom: 1px solid #ff9e03;
+  border-bottom: 1px solid ;
 }
 
 /* Stock name container */

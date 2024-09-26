@@ -1,7 +1,7 @@
 .stock-container {
   gap: 35px;
   padding: 35px;
-  background-color: #f8e2c8;
+  background-color: white;
 }
 
 h4 {
@@ -15,14 +15,14 @@ h4 {
   flex-direction: row;
   gap: 20px;
   padding: 20px;
-  background-color: #f8e2c8;
+  background-color: white;
   color: #333;
   height: 78%;
   width: 100%;
 }
 
 .stock-info {
-  background-color: #ffffff;
+  background-color: whitesmoke;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -34,6 +34,7 @@ h4 {
   margin: 0 auto;
   width: 30%;
   margin-left: 5%;
+  border: 2px solid rgb(95, 178, 182);
 }
 
 .stock-info img {
@@ -84,7 +85,7 @@ h4 {
 }
 
 .chart-container {
-  background-color: #ffffff;
+  background-color: whitesmoke;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -94,6 +95,7 @@ h4 {
   width: 65%;
   margin-left: 10%;
   margin-right: 5%;
+  border: 2px solid rgb(95, 178, 182);
 }
 
 .chart-container canvas {
