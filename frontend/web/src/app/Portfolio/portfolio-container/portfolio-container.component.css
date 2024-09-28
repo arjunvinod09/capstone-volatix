@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f5f5f5; /* Slightly lighter background color for better contrast */
+  background-color: white; /* Slightly lighter background color for better contrast */
 }
 
 .no-portfolio-container, .portfolio-container {
