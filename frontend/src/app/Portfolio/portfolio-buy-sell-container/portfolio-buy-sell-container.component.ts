@@ -102,7 +102,11 @@ export class PortfolioBuySellContainerComponent implements OnInit {
 
   loadStockAll(): void {
     this.stockService.getAllStocks().subscribe(stocks => {
+      // Assign the fetched stocks to availableStocks
       this.availableStocks = stocks;
+  
+      // Sort the stocks by name alphabetically
+      this.availableStocks.sort((a, b) => a.name.localeCompare(b.name));
     });
   }
 
