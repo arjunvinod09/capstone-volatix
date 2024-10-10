@@ -57,6 +57,8 @@ h4{
 .left-navbar{
     display: flex;
     justify-content: left;
+    gap: 100px;
+    margin-left: 50px;
 }
 
 .left-navbar li a:hover {

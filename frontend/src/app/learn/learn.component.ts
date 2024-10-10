@@ -28,7 +28,7 @@ export class LearnComponent implements OnInit {
     let params = new HttpParams()
       .set('q', 'cryptocurrency OR bitcoin')
       .set('language', 'en')
-      .set('pageSize', '3')
+      .set('pageSize', '4')
       .set('apiKey', apiKey);
 
     this.http.get<any>(apiUrl, { params }).subscribe({

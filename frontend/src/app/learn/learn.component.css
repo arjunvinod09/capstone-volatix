@@ -76,13 +76,14 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px; /* Limit the width of each card */
+    max-width: 1080px; /* Limit the width of each card */
+    max-height: 720px;
     margin: 20px; /* Removed margin to reduce gap */
   }
   
   .video-card iframe {
-    width: 100%;
-    height: 225px; /* Adjusted height for better fit */
+    width: 640px;
+    height: 360px; /* Adjusted height for better fit */
     border: none;
   }
   
